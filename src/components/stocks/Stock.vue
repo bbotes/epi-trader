@@ -48,10 +48,9 @@ export default {
                 stockPrice: this.stock.price,
                 quantity: this.quantity,
             };
-
-            // TODO: 5 - Let's buy the stock!
-            console.log(order);
-
+            
+            this.$store.dispatch('buyStock', order);
+            
             this.quantity = 0;
         },
     },
