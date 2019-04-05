@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <!-- // TODO: 3 - Link up the router with your HTML template -->
+        <router-view/>
       </div>
     </div>
   </div>
