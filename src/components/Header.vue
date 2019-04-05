@@ -13,8 +13,7 @@
             <a>Stocks</a>
           </router-link>
         </ul>
-        <!-- TODO: 1 - Display portfolio funds -->
-        <strong class="navbar-text navbar-right">Funds: FUNDS</strong>
+        <strong class="navbar-text navbar-right">Funds: {{ funds | currency }}</strong>
         <ul class="nav navbar-nav navbar-right">
           <li>
             <a href="#">End Day</a>
@@ -48,6 +47,10 @@
 
 <script>
 export default {
-
+  computed: {
+    funds(){
+      return this.$store.getters.funds;
+    }
+  }
 };
 </script>

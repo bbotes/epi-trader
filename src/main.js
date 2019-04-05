@@ -8,7 +8,7 @@ import store from './store/store';
 
 Vue.use(VueRouter);
 
-// TODO: 3 - Create a filter to format funds as a currency
+Vue.filter('currency', value => `EC ${value.toLocaleString()}`);
 
 const router = new VueRouter({
     mode: 'history',
